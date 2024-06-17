@@ -2,9 +2,10 @@ package resources
 
 import io.restassured.response.Response
 
+
 class Users extends HTTPClient{
 
-  final users = '/users'
+  final static users = '/users'
 
   TestDataBuilder testDataBuilder = new TestDataBuilder()
 
