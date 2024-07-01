@@ -25,5 +25,15 @@ class HTTPClient {
     .post(resourceURL)
   }
 
+  static Response get(String resourceURL, int resourceId) {
+    return RestAssured
+    .given()
+    .log()
+    .all()
+    .contentType(ContentType.JSON)
+    .when()
+    .get(resourceURL + "/" + resourceId)
+  }
+
 
 }

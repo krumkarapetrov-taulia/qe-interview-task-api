@@ -1,6 +1,6 @@
 package resources
 
-class TestDataBuilder {
+class  TestDataBuilder {
 
   /**
    * In this class you will have to write methods that will returns the objects that you want to use in your requests
@@ -9,9 +9,9 @@ class TestDataBuilder {
 
   static String userToDo(int userId, String title, boolean completed) {
     return "  {\n" +
-      "    \"userId\": " + userId + ",\n" +
+      "    \"userId\":" + userId + ",\n" +
       "    \"title\": \"" + title + "\",\n" +
-      "    \"completed\": " + completed + "\n" +
+      "    \"completed\":" + completed + "\n" +
       "  }"
   }
 
@@ -19,9 +19,9 @@ class TestDataBuilder {
 
   static String user(String name, String userName, String email) {
     return " {\n" +
-      "    \"name\": " + name + ",\n" +
-      "    \"username\": " + userName + ",\n" +
-      "    \"email\": " + email + ",\n" +
+      "    \"name\": \"" + name + "\",\n" +
+      "    \"username\": \"" + userName + "\",\n" +
+      "    \"email\": \"" + email + "\",\n" +
       "    \"address\": {\n" +
       "      \"street\": \"Kulas Light\",\n" +
       "      \"suite\": \"Apt. 556\",\n" +
@@ -40,6 +40,39 @@ class TestDataBuilder {
       "      \"bs\": \"harness real-time e-markets\"\n" +
       "    }\n" +
       "  }"
+  }
+
+  static String userPost(int userId, String title, String body) {
+    return "  {\n" +
+            "    \"userId\":" + userId + ",\n" +
+            "    \"title\": \"" + title + "\",\n" +
+            "    \"body\": \"" + body + "\"" +
+            "  }"
+  }
+
+  static String userComment(int postId, String name, String email, String body) {
+    return "  {\n" +
+            "    \"postId\": " + postId + ",\n" +
+            "    \"name\": \"" + name + "\",\n" +
+            "    \"email\": \"" + email + "\",\n" +
+            "    \"body\": \"" + body + "\"" +
+            "  }"
+  }
+
+  static String userAlbum(int userId, String title) {
+    return "  {\n" +
+            "    \"userId\": " + userId + ",\n" +
+            "    \"title\": \"" + title + "\"" +
+            "  }"
+  }
+
+  static String userPhoto(int albumId, String title, String url, String thumbnailUrl) {
+    return "  {\n" +
+            "    \"albumId\": " + albumId + ",\n" +
+            "    \"title\": \"" + title + "\",\n" +
+            "    \"url\": \"" + url + "\",\n" +
+            "    \"thumbnailUrl\": \"" + thumbnailUrl + "\"" +
+            "  }"
   }
 
 }
