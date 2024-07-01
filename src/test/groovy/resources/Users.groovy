@@ -8,10 +8,13 @@ class Users extends HTTPClient{
 
   TestDataBuilder testDataBuilder = new TestDataBuilder()
 
-  Response createUser() {
-    post(users, testDataBuilder.user())
+  Response createUser(String name, String userName, String email) {
+    post(users, testDataBuilder.user(name, userName, email))
   }
 
+  Response getUser(int userId) {
+    get(users, userId)
+  }
 
 
 }
